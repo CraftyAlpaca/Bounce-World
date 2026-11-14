@@ -8,3 +8,36 @@
 position = Vector2(574, 323)
 scale = Vector2(2.3, 2.3)
 texture = ExtResource("1_lti8b")
+
+[node name="Button" type="Button" parent="." unique_id=31208031]
+offset_left = 55.0
+offset_top = 495.0
+offset_right = 96.0
+offset_bottom = 526.0
+text = "Play"
+
+[node name="Button2" type="Button" parent="." unique_id=674093774]
+offset_left = 135.0
+offset_top = 497.0
+offset_right = 176.0
+offset_bottom = 528.0
+text = "Exit"
+
+[node name="Button3" type="Button" parent="." unique_id=1664841720]
+offset_left = 237.0
+offset_top = 498.0
+offset_right = 278.0
+offset_bottom = 529.0
+text = "Options"
+
+[node name="Button4" type="Button" parent="." unique_id=531343547]
+offset_left = 382.0
+offset_top = 489.0
+offset_right = 445.0
+offset_bottom = 520.0
+text = "Credits
+"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=2096221487]
+offset_right = 40.0
+offset_bottom = 40.0
