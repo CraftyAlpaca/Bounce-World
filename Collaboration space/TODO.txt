@@ -1,0 +1,12 @@
+Add basic character
+add standard movement
+	add controls
+	@later add control tutorial
+
+make tutorial level
+
+add bounce pad for more bounce
+
+decide on how to do walls
+
+add basic enemy
