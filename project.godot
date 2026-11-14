@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Crafty-Quantum-Haven"
-run/main_scene="uid://bat6owppxi07a"
+run/main_scene="uid://c70wfh86fxjne"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

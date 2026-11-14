@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c70wfh86fxjne"]
+
+[ext_resource type="Script" uid="uid://c6g110ga8f7by" path="res://Scripts/player.gd" id="1_odo66"]
+[ext_resource type="Texture2D" uid="uid://b715m66ac5hw4" path="res://Assets/Basic Player Sprite.png" id="2_tek1h"]
+[ext_resource type="PackedScene" uid="uid://c7mkpkmwx5udk" path="res://platform.tscn" id="3_tek1h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a8esu"]
+radius = 16.0
+
+[node name="Node2D" type="Node2D" unique_id=90067714]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1904847813]
+position = Vector2(568, 309)
+script = ExtResource("1_odo66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1023131358]
+shape = SubResource("CircleShape2D_a8esu")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=2116970383]
+texture = ExtResource("2_tek1h")
+
+[node name="StaticBody2D" parent="." unique_id=40748270 instance=ExtResource("3_tek1h")]
+position = Vector2(571, 384)
