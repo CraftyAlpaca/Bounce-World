@@ -4,7 +4,7 @@ Platformer where you're a bouncy ball
 Clock times:
 
   Alpaca:
-  14.11.: Started at 11:00
+  14.11.: Started at 11:00, Stopped at 12:30
 
   Quantum-byte:
 
