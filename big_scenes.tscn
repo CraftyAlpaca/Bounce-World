@@ -11,6 +11,7 @@ radius = 16.0
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1904847813]
 position = Vector2(568, 309)
+linear_damp_mode = 1
 script = ExtResource("1_odo66")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1023131358]
@@ -20,4 +21,4 @@ shape = SubResource("CircleShape2D_a8esu")
 texture = ExtResource("2_tek1h")
 
 [node name="StaticBody2D" parent="." unique_id=40748270 instance=ExtResource("3_tek1h")]
-position = Vector2(571, 384)
+position = Vector2(577, 387)
