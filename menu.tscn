@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bwf7fwyhia0ly"]
+
+[ext_resource type="Texture2D" uid="uid://b82ldu3fkmsfp" path="res://Assets/menu_background.webp" id="1_lti8b"]
+
+[node name="Node2D" type="Node2D" unique_id=1827888916]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=948464510]
+position = Vector2(574, 323)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("1_lti8b")
