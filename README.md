@@ -18,23 +18,22 @@ Design stuff:
 Note on using branches: since little experience, maybe just use main
 
 
-Color Palette:
+Color Palette (also see gimp-palette in assets)
 
 GIMP Palette
 Name: General_Palette
 Columns: 0
 #
-238  10 238 Untitled
-  0 255 255 Untitled
-255   0 170 Untitled
-  0 255   0 Untitled
-255 255   0 Untitled
-255 255 255 Untitled
-  9  10  15 Untitled
-130  13 130 Untitled
- 21   0 165 Untitled
-  0 113  12 Untitled
-100 111   0 Untitled
-208 208 208 Untitled
-126 126 126 Untitled
-
+|238|10|238| 
+|0|255|255|
+|255|0|170| 
+|0|255|0| 
+|255|255|0| 
+|255|255|255| 
+|9|10|15| 
+|130|13|130|
+|21|0|165| 
+|0|113|12| 
+|100|111|0|
+|208|208|208| 
+|126|126|126| 
