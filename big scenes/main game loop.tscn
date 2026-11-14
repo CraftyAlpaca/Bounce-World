@@ -1,3 +1,44 @@
 [gd_scene format=3 uid="uid://bat6owppxi07a"]
 
+[ext_resource type="Script" uid="uid://c6g110ga8f7by" path="res://Scripts/player.gd" id="1_mjf4k"]
+[ext_resource type="Texture2D" uid="uid://b715m66ac5hw4" path="res://Assets/Basic Player Sprite.png" id="1_uh5eo"]
+[ext_resource type="Texture2D" uid="uid://cv2b5s7b612eb" path="res://Assets/Basic Platform.png" id="2_cntdp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mjf4k"]
+friction = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkqkh"]
+radius = 16.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hu08g"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkqkh"]
+size = Vector2(300, 25)
+
 [node name="Root" type="Node2D" unique_id=147272934]
+
+[node name="Player" type="RigidBody2D" parent="." unique_id=527210641]
+position = Vector2(541, 169)
+mass = 5000.0
+physics_material_override = SubResource("PhysicsMaterial_mjf4k")
+linear_damp_mode = 1
+script = ExtResource("1_mjf4k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=401112480]
+shape = SubResource("CircleShape2D_dkqkh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=336459952]
+texture = ExtResource("1_uh5eo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1547348171]
+position = Vector2(468, 492)
+scale = Vector2(30, 1)
+physics_material_override = SubResource("PhysicsMaterial_hu08g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1671407403]
+shape = SubResource("RectangleShape2D_dkqkh")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=767601669]
+texture = ExtResource("2_cntdp")
