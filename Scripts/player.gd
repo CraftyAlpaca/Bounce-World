@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 var totalEnergy
+
 func _init() -> void:
 	totalEnergy = -self.position.y+100
 
