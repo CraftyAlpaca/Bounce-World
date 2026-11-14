@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cyks75ejnwliw"]
+
+[ext_resource type="PackedScene" uid="uid://dkrdk6qwm3xx1" path="res://player.tscn" id="1_x0rdp"]
+[ext_resource type="PackedScene" uid="uid://c7mkpkmwx5udk" path="res://platform.tscn" id="2_0t3ih"]
+[ext_resource type="Script" uid="uid://dyqfr0yay1odd" path="res://energy.gd" id="3_0t3ih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkqkh"]
+size = Vector2(77, 80)
+
+[node name="Level1" type="Node2D" unique_id=727154241]
+
+[node name="RigidBody2D" parent="." unique_id=1988495205 instance=ExtResource("1_x0rdp")]
+position = Vector2(351, 281)
+
+[node name="StaticBody2D" parent="." unique_id=40748270 instance=ExtResource("2_0t3ih")]
+position = Vector2(359, 399)
+
+[node name="StaticBody2D2" parent="." unique_id=737085166 instance=ExtResource("2_0t3ih")]
+position = Vector2(512, 250)
+rotation = 1.5452487
+
+[node name="energy" type="Area2D" parent="." unique_id=1271656904]
+position = Vector2(-5, 50)
+script = ExtResource("3_0t3ih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="energy" unique_id=1264553003]
+position = Vector2(465, 270)
+shape = SubResource("RectangleShape2D_dkqkh")
+
+[connection signal="body_entered" from="energy" to="energy" method="_on_body_entered"]
