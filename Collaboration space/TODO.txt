@@ -5,8 +5,4 @@ add standard movement
 
 make tutorial level
 
-add bounce pad for more bounce
-
-decide on how to do walls
-
 add basic enemy
