@@ -9,26 +9,26 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkqkh"]
 bg_color = Color(0.007834798, 0.007834798, 0.007834798, 1)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kk3ma"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytr4m"]
 texture = ExtResource("3_ytr4m")
 texture_region_size = Vector2i(192, 108)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nrnbx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l48gv"]
 texture = ExtResource("4_l48gv")
 texture_region_size = Vector2i(192, 108)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iqepy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ecwwl"]
 texture = ExtResource("5_ecwwl")
 texture_region_size = Vector2i(192, 108)
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_dkqkh"]
 tile_size = Vector2i(192, 108)
-sources/0 = SubResource("TileSetAtlasSource_kk3ma")
-sources/1 = SubResource("TileSetAtlasSource_nrnbx")
-sources/2 = SubResource("TileSetAtlasSource_iqepy")
+sources/0 = SubResource("TileSetAtlasSource_ytr4m")
+sources/1 = SubResource("TileSetAtlasSource_l48gv")
+sources/2 = SubResource("TileSetAtlasSource_ecwwl")
 
 [node name="Node2D" type="Node2D" unique_id=1827888916]
 script = ExtResource("1_ouk20")
@@ -58,6 +58,7 @@ text = "Credits
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=82288550]
 unique_name_in_owner = true
 visible = false
+z_index = 400
 offset_right = 1150.0
 offset_bottom = 640.0
 mouse_filter = 2
