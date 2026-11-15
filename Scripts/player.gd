@@ -47,7 +47,7 @@ func _on_area_2d_game_over() -> void:
 func set_checkpoint(checkpoint:Area2D):
 	var maplayer:TileMapLayer= checkpoint.get_parent()
 	Checkpoint = maplayer.map_to_local(maplayer.local_to_map(self.position))
-	LastCheckpointHeight = checkpoint.position.y
+	LastCheckpointHeight = Checkpoint.y
 	var velo = linear_velocity
 	get_parent().reset()
 	linear_velocity = velo
