@@ -5,10 +5,14 @@ Clock times:
 
   Alpaca:
   14.11.: Started at 11:00, Stopped at 12:30
-  Started at 13:30, stopped at
+  Started at 13:30, stopped at 17:30
+15.11.: Started at 10:00, Stopped at 13:00
+
 
   Quantum-byte:
-  Started at 13:30, stopped at
+  Started at 13:30, stopped at 18:00
+15.11.: Started at 10:00, Stopped at 13:00
+
 
 Design stuff:
 
