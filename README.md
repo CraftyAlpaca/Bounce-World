@@ -5,6 +5,8 @@ Move left using "a" and right using "d"
 
 Get to the top
 
+Play it on itch: https://a-craftyalpaca.itch.io/bounce-world
+
 Developed by quantum-byte821 and a_CraftyAlpaca
 
 No AI was used in the making of this game
