@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cxe1h0ynbdiix"]
 
+[ext_resource type="Script" uid="uid://bb802clso7m5b" path="res://Scripts/spikes.gd" id="1_d61k5"]
 [ext_resource type="Texture2D" uid="uid://cy05ks6hon5e0" path="res://Assets/spike_down.png" id="1_osrg5"]
 
 [node name="SpikeDown" type="Area2D" unique_id=440328839]
+script = ExtResource("1_d61k5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1176280721]
 texture = ExtResource("1_osrg5")

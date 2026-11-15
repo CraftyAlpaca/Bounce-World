@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c8uts0f56c0j7"]
 
 [ext_resource type="Texture2D" uid="uid://2g82g5ope85g" path="res://Assets/spike_right.png" id="1_g1w5i"]
+[ext_resource type="Script" uid="uid://bb802clso7m5b" path="res://Scripts/spikes.gd" id="1_gkds8"]
 
 [node name="SpikeRight" type="Area2D" unique_id=1509532378]
+script = ExtResource("1_gkds8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1378417979]
 texture = ExtResource("1_g1w5i")
