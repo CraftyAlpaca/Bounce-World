@@ -1,0 +1,84 @@
+[gd_resource type="TileSet" format=3 uid="uid://buk08nc5nr4ac"]
+
+[ext_resource type="PackedScene" uid="uid://maodwklmqie7" path="res://spikes.tscn" id="2_dqqcq"]
+[ext_resource type="Texture2D" uid="uid://sp0dv1vh5upr" path="res://Assets/platforms.png" id="2_hj1m8"]
+[ext_resource type="PackedScene" uid="uid://rwl5k150mlhv" path="res://checkpoint.tscn" id="3_hj1m8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rtx8d"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mwq2y"]
+texture = ExtResource("2_hj1m8")
+texture_region_size = Vector2i(14, 14)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -7, 7, -7, 7, 5.6583557, 7, 7, -7, 7)
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hj1m8"]
+scenes/2/scene = ExtResource("2_dqqcq")
+scenes/3/scene = ExtResource("3_hj1m8")
+
+[resource]
+tile_size = Vector2i(14, 14)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_rtx8d")
+sources/2 = SubResource("TileSetAtlasSource_mwq2y")
+sources/3 = SubResource("TileSetScenesCollectionSource_hj1m8")

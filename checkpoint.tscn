@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://rwl5k150mlhv"]
+
+[ext_resource type="Script" uid="uid://cxdy84quywycc" path="res://Scripts/checkpoint.gd" id="1_tnhlw"]
+[ext_resource type="Texture2D" uid="uid://dvm7jrh4vb8gd" path="res://Assets/green_flag.png" id="2_s20m7"]
+[ext_resource type="Texture2D" uid="uid://cqhq8fy5r8heu" path="res://Assets/red_flag.png" id="3_q25r3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eun3"]
+atlas = ExtResource("2_s20m7")
+region = Rect2(0, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dqgm"]
+atlas = ExtResource("2_s20m7")
+region = Rect2(14, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plj7t"]
+atlas = ExtResource("2_s20m7")
+region = Rect2(28, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtr31"]
+atlas = ExtResource("3_q25r3")
+region = Rect2(0, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nni48"]
+atlas = ExtResource("3_q25r3")
+region = Rect2(14, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45wyy"]
+atlas = ExtResource("3_q25r3")
+region = Rect2(0, 14, 14, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkqkh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4eun3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dqgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plj7t")
+}],
+"loop": 1,
+"name": &"collected",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtr31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nni48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45wyy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Checkpoint" type="Area2D" unique_id=1858075709]
+script = ExtResource("1_tnhlw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1087901642]
+sprite_frames = SubResource("SpriteFrames_dkqkh")
+autoplay = "default"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1261691697]
+polygon = PackedVector2Array(-4, 7, -1, -3, 2, -3, 5, 0, 5, 0, 5, 7)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,13 +1,70 @@
-[gd_scene format=3 uid="uid://cyks75ejnwliw"]
+[gd_scene format=4 uid="uid://cyks75ejnwliw"]
 
 [ext_resource type="Script" uid="uid://4ws3m0gjcfln" path="res://Scripts/level_1.gd" id="1_2ow8g"]
 [ext_resource type="PackedScene" uid="uid://dkrdk6qwm3xx1" path="res://player.tscn" id="1_x0rdp"]
-[ext_resource type="PackedScene" uid="uid://c7mkpkmwx5udk" path="res://platform.tscn" id="2_0t3ih"]
 [ext_resource type="PackedScene" uid="uid://ba7hghvnl8eg2" path="res://energy_drink.tscn" id="3_0t3ih"]
 [ext_resource type="Script" uid="uid://b1wi67trjlwey" path="res://world_end.gd" id="4_pe8na"]
+[ext_resource type="TileSet" uid="uid://buk08nc5nr4ac" path="res://The tile set.tres" id="5_u82o0"]
+[ext_resource type="Texture2D" uid="uid://dvm7jrh4vb8gd" path="res://Assets/green_flag.png" id="6_d05ww"]
+[ext_resource type="Texture2D" uid="uid://cqhq8fy5r8heu" path="res://Assets/red_flag.png" id="7_u82o0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_elox4"]
 size = Vector2(1594.5, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtx8d"]
+atlas = ExtResource("6_d05ww")
+region = Rect2(0, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc3ba"]
+atlas = ExtResource("6_d05ww")
+region = Rect2(14, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwq2y"]
+atlas = ExtResource("6_d05ww")
+region = Rect2(28, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgxgo"]
+atlas = ExtResource("7_u82o0")
+region = Rect2(0, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5ei4"]
+atlas = ExtResource("7_u82o0")
+region = Rect2(14, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5f7q"]
+atlas = ExtResource("7_u82o0")
+region = Rect2(0, 14, 14, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkqkh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtx8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc3ba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwq2y")
+}],
+"loop": 1,
+"name": &"Collected",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgxgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5ei4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5f7q")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level1" type="Node2D" unique_id=727154241]
 script = ExtResource("1_2ow8g")
@@ -21,19 +78,6 @@ drag_vertical_enabled = true
 drag_top_margin = 0.5
 drag_bottom_margin = 0.5
 
-[node name="StaticBody2D" parent="." unique_id=40748270 instance=ExtResource("2_0t3ih")]
-position = Vector2(149, 345)
-
-[node name="StaticBody2D2" parent="." unique_id=509440573 instance=ExtResource("2_0t3ih")]
-position = Vector2(312, 482)
-rotation = 1.5707964
-
-[node name="StaticBody2D3" parent="." unique_id=694891955 instance=ExtResource("2_0t3ih")]
-position = Vector2(473, 619)
-
-[node name="StaticBody2D4" parent="." unique_id=707356801 instance=ExtResource("2_0t3ih")]
-position = Vector2(862, 215)
-
 [node name="energy" parent="." unique_id=1535500231 instance=ExtResource("3_0t3ih")]
 position = Vector2(466, 552)
 
@@ -45,6 +89,26 @@ script = ExtResource("4_pe8na")
 position = Vector2(653, 5)
 shape = SubResource("RectangleShape2D_elox4")
 
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1896255164]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAHAAYAAgADAAIAAAAIAAYAAgAFAAIAAAAJAAYAAgAFAAIAAAAAAAgAAgAAAAAAAAABAAgAAgABAAAAAAACAAgAAgABAAAAAAADAAgAAgABAAAAAAAEAAgAAgABAAAAAAAFAAgAAgACAAAAAAD+/wcAAgABAAIAAAD//wcAAgABAAIAAAAAAAcAAgACAAIAAAD9/wcAAgAAAAIAAAACAAcAAwAAAAAAAgADAAcAAwAAAAAAAgAEAAcAAwAAAAAAAgADAAYAAwAAAAAAAwAHAAUAAwAAAAAAAwAKAAUAAgAAAAMAAAALAAUAAgABAAMAAAAMAAUAAgACAAMAAAANAAQAAgAAAAEAAAAOAAQAAgABAAEAAAAPAAQAAgACAAEAAAAOAAMAAwAAAAAAAwA=")
+tile_set = ExtResource("5_u82o0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TileMapLayer" unique_id=1948700244]
+z_index = -1
+position = Vector2(769, 174)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_dkqkh")
+autoplay = "default"
+frame_progress = 0.086470656
+
+[node name="energy2" parent="." unique_id=347319037 instance=ExtResource("3_0t3ih")]
+position = Vector2(636, 246)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="gameOver" from="Area2D" to="." method="_on_area_2d_game_over"]
-[connection signal="gameOver" from="Area2D" to="RigidBody2D" method="_on_area_2d_game_over"]
+[connection signal="body_entered" from="TileMapLayer/Area2D" to="TileMapLayer/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@71046" to="TileMapLayer/@Area2D@71046" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@71047" to="TileMapLayer/@Area2D@71047" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/Checkpoint" to="TileMapLayer/Checkpoint" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@71048" to="TileMapLayer/@Area2D@71048" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@71049" to="TileMapLayer/@Area2D@71049" method="_on_body_entered"]
