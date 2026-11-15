@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://maodwklmqie7"]
 
 [ext_resource type="Script" uid="uid://bb802clso7m5b" path="res://Scripts/spikes.gd" id="1_nrdsm"]
-[ext_resource type="Texture2D" uid="uid://bwm8ngayfnmnh" path="res://Assets/Spikes.png" id="2_8fhau"]
+[ext_resource type="Texture2D" uid="uid://d24jipwxdc0h7" path="res://Assets/spike_up.png" id="2_nrdsm"]
 
 [node name="Area2D" type="Area2D" unique_id=123568630]
 collision_layer = 2
@@ -9,9 +9,9 @@ collision_mask = 2
 script = ExtResource("1_nrdsm")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=370442364]
-polygon = PackedVector2Array(-7, 7, -3, 0, 0, 7, 3, 0, 7, 7)
+polygon = PackedVector2Array(-7, 7, -3, 3, -1, 0, 3, 3, 7, 7)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=507822947]
-texture = ExtResource("2_8fhau")
+texture = ExtResource("2_nrdsm")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

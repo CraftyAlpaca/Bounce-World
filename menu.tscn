@@ -1,43 +1,72 @@
 [gd_scene format=3 uid="uid://bwf7fwyhia0ly"]
 
 [ext_resource type="Texture2D" uid="uid://b82ldu3fkmsfp" path="res://Assets/menu_background.webp" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://bep4tydyybvud" path="res://Scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Script" uid="uid://csp0v8orok0rj" path="res://Scripts/credits.gd" id="3_mae5d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkqkh"]
+bg_color = Color(0.007834798, 0.007834798, 0.007834798, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1827888916]
+script = ExtResource("1_ouk20")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=948464510]
 position = Vector2(574, 323)
 scale = Vector2(2.3, 2.3)
 texture = ExtResource("1_lti8b")
 
-[node name="Button" type="Button" parent="." unique_id=31208031]
+[node name="Play" type="Button" parent="." unique_id=31208031]
 offset_left = 55.0
 offset_top = 495.0
 offset_right = 96.0
 offset_bottom = 526.0
 text = "Play"
 
-[node name="Button2" type="Button" parent="." unique_id=674093774]
-offset_left = 135.0
-offset_top = 497.0
-offset_right = 176.0
-offset_bottom = 528.0
+[node name="Exit" type="Button" parent="." unique_id=674093774]
+offset_left = 53.0
+offset_top = 570.0
+offset_right = 94.0
+offset_bottom = 601.0
 text = "Exit"
 
-[node name="Button3" type="Button" parent="." unique_id=1664841720]
-offset_left = 237.0
-offset_top = 498.0
-offset_right = 278.0
-offset_bottom = 529.0
-text = "Options"
-
-[node name="Button4" type="Button" parent="." unique_id=531343547]
-offset_left = 382.0
-offset_top = 489.0
-offset_right = 445.0
-offset_bottom = 520.0
+[node name="Credits" type="Button" parent="." unique_id=531343547]
+offset_left = 56.0
+offset_top = 532.0
+offset_right = 119.0
+offset_bottom = 563.0
 text = "Credits
 "
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=2096221487]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=82288550]
+unique_name_in_owner = true
+visible = false
+offset_right = 1150.0
+offset_bottom = 640.0
+mouse_filter = 2
+script = ExtResource("3_mae5d")
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=855925525]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dkqkh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/PanelContainer" unique_id=1848251113]
+custom_minimum_size = Vector2(800, 400)
+layout_mode = 2
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "Credits:
+Code by:						A_Crafty alpaca
+		
+Art by: 							quantum-byte821
+Level design by:			quantum-byte821
+										A_Crafty Alpaca"
+fit_content = true
+selection_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=201725601]
+anchor_mode = 0
+zoom = Vector2(1.68, 1.68)
+
+[connection signal="button_up" from="Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Exit" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="Credits" to="." method="_on_credits_button_up"]

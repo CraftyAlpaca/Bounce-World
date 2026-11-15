@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://maodwklmqie7" path="res://spikes.tscn" id="2_dqqcq"]
 [ext_resource type="Texture2D" uid="uid://sp0dv1vh5upr" path="res://Assets/platforms.png" id="2_hj1m8"]
 [ext_resource type="PackedScene" uid="uid://rwl5k150mlhv" path="res://checkpoint.tscn" id="3_hj1m8"]
+[ext_resource type="PackedScene" uid="uid://ba7hghvnl8eg2" path="res://energy_drink.tscn" id="4_d2rcp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rtx8d"]
 friction = 0.0
@@ -75,6 +76,7 @@ texture_region_size = Vector2i(14, 14)
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hj1m8"]
 scenes/2/scene = ExtResource("2_dqqcq")
 scenes/3/scene = ExtResource("3_hj1m8")
+scenes/4/scene = ExtResource("4_d2rcp")
 
 [resource]
 tile_size = Vector2i(14, 14)

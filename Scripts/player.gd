@@ -10,6 +10,7 @@ var totalEnergy
 func _init() -> void:
 	StartEnergy = 100
 	LastCheckpointHeight =position.y
+	Checkpoint = position
 	CurrentEnergy = StartEnergy+10
 
 var state = 0
@@ -28,8 +29,7 @@ func _input(event: InputEvent) -> void:
 
 func die():
 	move_body(Checkpoint)
-	CurrentEnergy = StartEnergy
-	self.linear_velocity = Vector2(0,0)
+	get_parent().reset()
 
 func _on_body_entered(_body: Node) -> void:
 	if linear_velocity.y >=0:
@@ -46,6 +46,9 @@ func set_checkpoint(checkpoint:Area2D):
 	var maplayer:TileMapLayer= checkpoint.get_parent()
 	Checkpoint = maplayer.map_to_local(maplayer.local_to_map(self.position))
 	LastCheckpointHeight = checkpoint.position.y
+	var velo = linear_velocity
+	get_parent().reset()
+	linear_velocity = velo
 
 var reset_state = false
 var moveVector: Vector2
@@ -58,3 +61,7 @@ func _integrate_forces(forceState):
 func move_body(targetPos: Vector2):
 	moveVector = targetPos;
 	reset_state = true;
+
+func reset():
+	CurrentEnergy = StartEnergy
+	self.linear_velocity = Vector2(0,0)
