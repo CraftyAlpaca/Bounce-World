@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cxe1h0ynbdiix"]
+
+[ext_resource type="Texture2D" uid="uid://cy05ks6hon5e0" path="res://Assets/spike_down.png" id="1_osrg5"]
+
+[node name="SpikeDown" type="Area2D" unique_id=440328839]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1176280721]
+texture = ExtResource("1_osrg5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=434358131]
+polygon = PackedVector2Array(-7, -6, -7, -7, 7, -7, 7, -6, 6, -6, 0, 0, -1, 0)
