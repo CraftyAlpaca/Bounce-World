@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgcphce0ogoix"
-path="res://.godot/imported/Color pallete.png-0a90d89109e9eda6bc59d37a817cc7b2.ctex"
+uid="uid://c2x8mpuu6e3cx"
+path="res://.godot/imported/spike_left.png-b297d2202f003f2897ef27633ecbe947.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Color pallete.png"
-dest_files=["res://.godot/imported/Color pallete.png-0a90d89109e9eda6bc59d37a817cc7b2.ctex"]
+source_file="res://Assets/spike_left.png"
+dest_files=["res://.godot/imported/spike_left.png-b297d2202f003f2897ef27633ecbe947.ctex"]
 
 [params]
 

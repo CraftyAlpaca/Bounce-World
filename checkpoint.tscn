@@ -42,7 +42,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"collected",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -64,6 +64,7 @@ script = ExtResource("1_tnhlw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1087901642]
 sprite_frames = SubResource("SpriteFrames_dkqkh")
+animation = &"collected"
 autoplay = "default"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1261691697]

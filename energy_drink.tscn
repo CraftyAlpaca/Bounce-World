@@ -1,20 +1,18 @@
 [gd_scene format=3 uid="uid://ba7hghvnl8eg2"]
 
 [ext_resource type="Script" uid="uid://dyqfr0yay1odd" path="res://energy.gd" id="1_srvva"]
+[ext_resource type="Texture2D" uid="uid://bs2qnwoiek1fl" path="res://Assets/energy_drink.png" id="2_ro411"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dkqkh"]
-size = Vector2(60, 60)
+size = Vector2(14, 14)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0t3ih"]
-size = Vector2(60, 60)
-
-[node name="energy" type="Area2D" unique_id=1535500231]
+[node name="energy" type="Area2D" unique_id=1535500231 groups=["Energy Drinks"]]
 script = ExtResource("1_srvva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=381536085]
 shape = SubResource("RectangleShape2D_dkqkh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1040072769]
-texture = SubResource("PlaceholderTexture2D_0t3ih")
+texture = ExtResource("2_ro411")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
