@@ -26,6 +26,8 @@ func _input(event: InputEvent) -> void:
 	elif (event.is_action_released("left")and state ==1)or (event.is_action_released("right") and state == -1):
 		linear_velocity.x = 0
 		state = 0
+	elif (event.is_action_pressed("ui_cancel")):
+		%PanelContainer.visible = true
 
 func die():
 	move_body(Checkpoint)

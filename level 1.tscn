@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4ws3m0gjcfln" path="res://Scripts/level_1.gd" id="1_2ow8g"]
 [ext_resource type="PackedScene" uid="uid://dkrdk6qwm3xx1" path="res://player.tscn" id="1_x0rdp"]
+[ext_resource type="Script" uid="uid://dxgfp8ldlnef1" path="res://Scripts/panel_container.gd" id="3_2ow8g"]
 [ext_resource type="Script" uid="uid://b1wi67trjlwey" path="res://world_end.gd" id="4_pe8na"]
 [ext_resource type="TileSet" uid="uid://buk08nc5nr4ac" path="res://The tile set.tres" id="5_u82o0"]
 
@@ -21,17 +22,21 @@ drag_top_margin = 0.5
 drag_bottom_margin = 0.5
 
 [node name="PanelContainer" type="PanelContainer" parent="RigidBody2D/Camera2D" unique_id=347724909]
+unique_name_in_owner = true
+visible = false
+z_index = 20
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -1057.5
-offset_top = -552.5
+offset_top = -1085.0
 offset_right = 1057.5
-offset_bottom = 552.5
+offset_bottom = 1042.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_2ow8g")
 
 [node name="CenterContainer" type="CenterContainer" parent="RigidBody2D/Camera2D/PanelContainer" unique_id=723445571]
 layout_mode = 2
@@ -41,10 +46,12 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="RigidBody2D/Camera2D/PanelContainer/CenterContainer/VBoxContainer" unique_id=1930004711]
 layout_mode = 2
+theme_override_font_sizes/font_size = 80
 text = "resume"
 
 [node name="Button2" type="Button" parent="RigidBody2D/Camera2D/PanelContainer/CenterContainer/VBoxContainer" unique_id=1187780337]
 layout_mode = 2
+theme_override_font_sizes/font_size = 80
 text = "quit"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1879207169]
@@ -60,13 +67,15 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAHAAYAAgADAAIAAAAIAAYAAgAFAAIAAAAJAAYAAgAFAAIAAAAAAAgAAgAAAAAAAAABAAgAAgABAAAAAAACAAgAAgABAAAAAAADAAgAAgABAAAAAAAEAAgAAgABAAAAAAAFAAgAAgACAAAAAAD+/wcAAgABAAIAAAD//wcAAgABAAIAAAAAAAcAAgACAAIAAAD9/wcAAgAAAAIAAAACAAcAAwAAAAAAAgADAAcAAwAAAAAAAgAEAAcAAwAAAAAAAgADAAYAAwAAAAAAAwAHAAUAAwAAAAAAAwAKAAUAAgAAAAMAAAALAAUAAgABAAMAAAAMAAUAAgACAAMAAAANAAQAAgAAAAEAAAAOAAQAAgABAAEAAAAPAAQAAgACAAEAAAAOAAMAAwAAAAAAAwAFAAcAAwAAAAAABAAJAAUAAwAAAAAABAALAAQAAwAAAAAABAA=")
 tile_set = ExtResource("5_u82o0")
 
+[connection signal="button_down" from="RigidBody2D/Camera2D/PanelContainer/CenterContainer/VBoxContainer/Button" to="RigidBody2D/Camera2D/PanelContainer" method="_on_button_button_down"]
+[connection signal="button_down" from="RigidBody2D/Camera2D/PanelContainer/CenterContainer/VBoxContainer/Button2" to="RigidBody2D/Camera2D/PanelContainer" method="_on_button_2_button_down"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="TileMapLayer/Area2D" to="TileMapLayer/Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@315937" to="TileMapLayer/@Area2D@315937" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@315938" to="TileMapLayer/@Area2D@315938" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@351248" to="TileMapLayer/@Area2D@351248" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@351249" to="TileMapLayer/@Area2D@351249" method="_on_body_entered"]
 [connection signal="body_entered" from="TileMapLayer/Checkpoint" to="TileMapLayer/Checkpoint" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@315939" to="TileMapLayer/@Area2D@315939" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@315940" to="TileMapLayer/@Area2D@315940" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@351250" to="TileMapLayer/@Area2D@351250" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@351251" to="TileMapLayer/@Area2D@351251" method="_on_body_entered"]
 [connection signal="body_entered" from="TileMapLayer/energy" to="TileMapLayer/energy" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@315941" to="TileMapLayer/@Area2D@315941" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@315942" to="TileMapLayer/@Area2D@315942" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@351252" to="TileMapLayer/@Area2D@351252" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@351253" to="TileMapLayer/@Area2D@351253" method="_on_body_entered"]
