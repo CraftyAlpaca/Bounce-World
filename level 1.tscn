@@ -3,11 +3,7 @@
 [ext_resource type="Script" uid="uid://4ws3m0gjcfln" path="res://Scripts/level_1.gd" id="1_2ow8g"]
 [ext_resource type="PackedScene" uid="uid://dkrdk6qwm3xx1" path="res://player.tscn" id="1_x0rdp"]
 [ext_resource type="Script" uid="uid://dxgfp8ldlnef1" path="res://Scripts/panel_container.gd" id="3_2ow8g"]
-[ext_resource type="Script" uid="uid://b1wi67trjlwey" path="res://world_end.gd" id="4_pe8na"]
 [ext_resource type="TileSet" uid="uid://buk08nc5nr4ac" path="res://The tile set.tres" id="5_u82o0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_elox4"]
-size = Vector2(1594.5, 20)
 
 [node name="Level1" type="Node2D" unique_id=727154241]
 script = ExtResource("1_2ow8g")
@@ -54,28 +50,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 80
 text = "quit"
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1879207169]
-position = Vector2(-4, 649)
-script = ExtResource("4_pe8na")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1603126314]
-position = Vector2(653, 5)
-shape = SubResource("RectangleShape2D_elox4")
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1896255164]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAHAAYAAgADAAIAAAAIAAYAAgAFAAIAAAAJAAYAAgAFAAIAAAAAAAgAAgAAAAAAAAABAAgAAgABAAAAAAACAAgAAgABAAAAAAADAAgAAgABAAAAAAAEAAgAAgABAAAAAAAFAAgAAgACAAAAAAD+/wcAAgABAAIAAAD//wcAAgABAAIAAAAAAAcAAgACAAIAAAD9/wcAAgAAAAIAAAACAAcAAwAAAAAAAgADAAcAAwAAAAAAAgAEAAcAAwAAAAAAAgADAAYAAwAAAAAAAwAHAAUAAwAAAAAAAwAKAAUAAgAAAAMAAAALAAUAAgABAAMAAAAMAAUAAgACAAMAAAANAAQAAgAAAAEAAAAOAAQAAgABAAEAAAAPAAQAAgACAAEAAAAOAAMAAwAAAAAAAwAFAAcAAwAAAAAABAAJAAUAAwAAAAAABAALAAQAAwAAAAAABAA=")
+tile_map_data = PackedByteArray("AAD//wcAAgAAAAQAAAAAAAcAAgABAAQAAAABAAcAAgABAAQAAAACAAcAAgACAAQAAAACAAYAAgAFAAIAAAACAAQAAgAFAAEAAAACAAUAAgAFAAEAAAACAAMAAgAFAAAAAAADAAsAAwAAAAAABQAEAAsAAwAAAAAABQAFAAsAAwAAAAAABQABAAwAAwAAAAAABAADAA0AAgACAAQAAAACAA0AAgABAAQAAAABAA0AAgABAAQAAAAAAA0AAgABAAQAAAD//w0AAgABAAQAAAD+/w0AAgABAAQAAAD9/w0AAgABAAQAAAACAAIAAwAAAAAAAwA=")
 tile_set = ExtResource("5_u82o0")
 
 [connection signal="button_down" from="RigidBody2D/Camera2D/PanelContainer/CenterContainer/VBoxContainer/Button" to="RigidBody2D/Camera2D/PanelContainer" method="_on_button_button_down"]
 [connection signal="button_down" from="RigidBody2D/Camera2D/PanelContainer/CenterContainer/VBoxContainer/Button2" to="RigidBody2D/Camera2D/PanelContainer" method="_on_button_2_button_down"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/Area2D" to="TileMapLayer/Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@351248" to="TileMapLayer/@Area2D@351248" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@351249" to="TileMapLayer/@Area2D@351249" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/Checkpoint" to="TileMapLayer/Checkpoint" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@351250" to="TileMapLayer/@Area2D@351250" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@351251" to="TileMapLayer/@Area2D@351251" method="_on_body_entered"]
 [connection signal="body_entered" from="TileMapLayer/energy" to="TileMapLayer/energy" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@351252" to="TileMapLayer/@Area2D@351252" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@351253" to="TileMapLayer/@Area2D@351253" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/Checkpoint" to="TileMapLayer/Checkpoint" method="_on_body_entered"]

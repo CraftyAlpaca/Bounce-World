@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://sp0dv1vh5upr" path="res://Assets/platforms.png" id="2_hj1m8"]
 [ext_resource type="PackedScene" uid="uid://rwl5k150mlhv" path="res://checkpoint.tscn" id="3_hj1m8"]
 [ext_resource type="PackedScene" uid="uid://ba7hghvnl8eg2" path="res://energy_drink.tscn" id="4_d2rcp"]
+[ext_resource type="PackedScene" uid="uid://cxe1h0ynbdiix" path="res://spike_down.tscn" id="5_ggt6b"]
+[ext_resource type="PackedScene" uid="uid://bc63n28f1445f" path="res://spike_left.tscn" id="6_3048m"]
+[ext_resource type="PackedScene" uid="uid://c8uts0f56c0j7" path="res://spike_right.tscn" id="7_yvdtg"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rtx8d"]
 friction = 0.0
@@ -77,6 +80,9 @@ texture_region_size = Vector2i(14, 14)
 scenes/2/scene = ExtResource("2_dqqcq")
 scenes/3/scene = ExtResource("3_hj1m8")
 scenes/4/scene = ExtResource("4_d2rcp")
+scenes/5/scene = ExtResource("5_ggt6b")
+scenes/6/scene = ExtResource("6_3048m")
+scenes/7/scene = ExtResource("7_yvdtg")
 
 [resource]
 tile_size = Vector2i(14, 14)
